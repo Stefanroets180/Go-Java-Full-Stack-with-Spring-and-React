@@ -21,9 +21,9 @@ class TodoApp extends Component {
                             <Route path="/" exact component={LoginComponent}/>
                             <Route path="/login" component={LoginComponent}/>
                             <AuthenticatedRoute path="/welcome/:name" component={WelcomeComponent}/>
+                            <AuthenticatedRoute path="/todos/:id" component={TodoComponent}/>
                             <AuthenticatedRoute path="/todos" component={ListTodosComponent}/>
                             <AuthenticatedRoute path="/logout" component={LogoutComponent}/>
-                            <AuthenticatedRoute path="/todos:id" component={TodoComponent}/>
                             
                             <Route component={ErrorComponent}/>
                         </Switch>
@@ -36,19 +36,5 @@ class TodoApp extends Component {
         )
     }
 }
-
-// function ShowInvalidCredentials(props){
-//     if(props.hasLoginFailed) {
-//         return <div>Invalid Credentials</div>
-//     }
-//     return null
-// }
-
-// function ShowLoginSuccessMessage(props) {
-//     if(props.showSuccessMessage) {
-//         return <div>Login Sucessful</div>
-//     }
-//     return null
-// }
 
 export default TodoApp
