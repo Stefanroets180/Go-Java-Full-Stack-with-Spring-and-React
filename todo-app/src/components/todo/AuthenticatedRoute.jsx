@@ -13,4 +13,4 @@ class AuthenticatedRoute extends Component {
     }
 }
 
-export default AuthenticatedRoute   
+export default AuthenticatedRoute
